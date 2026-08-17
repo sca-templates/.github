@@ -12,7 +12,7 @@ A batteries-included platform for building and running production-ready services
 - **Microservices** (`nest-*` repos) — Domain services built with NestJS/TypeScript and wired into the infrastructure.
 - **Shared packages** (`@sca/*`) — Zero-logic plumbing libraries (core, contracts, connections, clients) consumed by every microservice.
 - **Documentation** (`sca-docs`) — The Obsidian knowledge base that maps the entire ecosystem; topology lives here, depth lives in each repo.
-- **Dev tools** (`infra-dev`) — MinIO (S3) and MailHog (SMTP) for local use.
+- **Dev tools** (`local-dev-tools`) — MinIO (S3) and MailHog (SMTP) for local use.
 
 Every service follows the same pattern: own folder, own `Makefile`, own `compose.yml`, secrets from Vault via AppRole, `.env` generated at runtime, loopback-only ports, Consul health checks, and Prometheus scrape targets.
 
@@ -27,7 +27,7 @@ Every service follows the same pattern: own folder, own `Makefile`, own `compose
 | Skeleton | `nest-template` | Clone this to create a new `nest-*` service |
 | Shared packages | `@sca/*` | `@sca/core`, `@sca/contracts` |
 | Documentation | `sca-docs` | — |
-| Dev tools | `infra-dev` | — |
+| Dev tools | `local-dev-tools` | — |
 | Org config | `.github` | — |
 
 Framework-first naming: the framework implies the platform (`nest-*` = backend API, `react-*` = frontend web, `next-*` = fullstack web, `react-native-*` = mobile).
@@ -57,7 +57,7 @@ Framework-first naming: the framework implies the platform (`nest-*` = backend A
 | [nest-auth](https://github.com/sca-templates/nest-auth) | Authentication, authorization and access control service | auth, authentication, authorization, rbac |
 | [nest-notifications](https://github.com/sca-templates/nest-notifications) | Multi-channel notification delivery — push, email and SMS | notifications, push, email, sms |
 | [nest-logging](https://github.com/sca-templates/nest-logging) | Audit trail and structured logging service | logging, audit, structured-logging |
-| [nest-ai](https://github.com/sca-templates/nest-ai) | AI/ML integration service with vector storage | ai, ml, integrations, vector |
+| [py-ai](https://github.com/sca-templates/py-ai) | AI/ML integration service with vector storage | ai, ml, integrations, vector |
 
 ### Shared packages
 
@@ -117,7 +117,7 @@ flowchart LR
     AUTH[nest-auth]
     NOTI[nest-notifications]
     LOG[nest-logging]
-    AI[nest-ai]
+    AI[py-ai]
   end
 
   V -.->|secrets| PG
