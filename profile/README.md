@@ -47,7 +47,7 @@ Framework-first naming: the framework implies the platform (`nest-*` = backend A
 | [infra-consul](https://github.com/sca-templates/infra-consul) | Service discovery with health checks and gossip-based clustering | consul, service-discovery, health-checks, networking |
 | [infra-prometheus](https://github.com/sca-templates/infra-prometheus) | Metrics collection, alerting rules and PromQL querying | prometheus, metrics, alerting, tsdb |
 | [infra-grafana](https://github.com/sca-templates/infra-grafana) | Dashboard visualization, provisioned data sources and alerting | grafana, dashboards, visualization, monitoring |
-| [infra-dev](https://github.com/sca-templates/infra-dev) | Local development tools — S3-compatible storage and SMTP capture | dev-tools, minio, mailhog, local-development |
+| [local-dev-tools](https://github.com/sca-templates/local-dev-tools) | Local development tools — S3-compatible storage and SMTP capture | dev-tools, minio, mailhog, local-development |
 
 ### Microservices
 
