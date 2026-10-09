@@ -1,0 +1,72 @@
+name: Bug report
+description: Report a problem in a sca-templates repository
+title: "bug: <short description>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please search existing issues
+        first. For security issues, use the **Security** tab instead.
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: Which repository is affected?
+      placeholder: "e.g. CI-CD-Templates"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Release tag, commit SHA, or `main`.
+      placeholder: "v3.3.1 or abc1234"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and evidence
+      description: Relevant logs, screenshots, or command output (redact secrets).
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I searched existing issues and this is not a duplicate
+          required: true
+        - label: This is not a security vulnerability (those go through the Security tab)
+          required: true
